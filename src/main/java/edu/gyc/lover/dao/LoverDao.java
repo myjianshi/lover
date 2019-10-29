@@ -3,6 +3,8 @@ package edu.gyc.lover.dao;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import edu.gyc.lover.model.Lover;
 
+import java.util.List;
+
 /**
  * <p>
  * Mapper 接口
@@ -13,4 +15,5 @@ import edu.gyc.lover.model.Lover;
  */
 public interface LoverDao extends BaseMapper<Lover> {
 
+    public List<String> getAllLoverNames();
 }

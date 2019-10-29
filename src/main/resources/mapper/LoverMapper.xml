@@ -9,5 +9,8 @@
         <result column="price" property="price"/>
         <result column="birthday" property="birthday"/>
     </resultMap>
+    <select id="getAllLoverNames" resultType="java.lang.String">
+        select name from lover
+    </select>
 
 </mapper>

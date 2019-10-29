@@ -22,4 +22,9 @@ class LoverApplicationTests {
         log.info("All lovers: " + loverService.list());
     }
 
+    @Test
+    void hi() {
+        log.info("Lover names:" + loverDao.getAllLoverNames());
+    }
+
 }
