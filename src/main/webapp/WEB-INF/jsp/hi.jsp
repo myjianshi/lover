@@ -3,6 +3,16 @@
 <html>
 <head>
     <title>Lover</title>
+    <script>
+        function del() {
+            var msg = "您真的确定要删除吗？\n\n请确认！";
+            if (confirm(msg)==true){
+                return true;
+            }else{
+                return false;
+            }
+        }
+    </script>
 </head>
 <body>
 <h1 align="center">Hi ls' lovers</h1>
@@ -20,8 +30,8 @@
                 <td>${girl.id}</td>
                 <td>${girl.name}</td>
                 <td>${girl.price}</td>
-                <td><a href="editGirl?id=${girl.id}">Edit</a> </td>
-                <td><a href="delGirl?id=${girl.id}">Del</a> </td>
+                <td><a href="edit?id=${girl.id}">Edit</a> </td>
+                <td><a href="del?id=${girl.id}" onclick="javascript:return del();"">Del</a> </td>
 
             </tr>
         </c:forEach>
@@ -36,7 +46,7 @@
         <a href="?start=${page.pages}">末页</a>
 
     </div>
-    <form action="addGirl" method="post">
+    <form action="add" method="post">
 
         name: <input name="name"> <br>
         price: <input name="price"> <br>
