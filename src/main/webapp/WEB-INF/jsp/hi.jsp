@@ -13,6 +13,7 @@
             }
         }
     </script>
+    <script src="js/hi.js"></script>
 </head>
 <body>
 <h1 align="center">Hi ls' lovers</h1>
@@ -31,13 +32,15 @@
                 <td>${girl.name}</td>
                 <td>${girl.price}</td>
                 <td><a href="edit?id=${girl.id}">Edit</a> </td>
-                <td><a href="del?id=${girl.id}" onclick="javascript:return del();"">Del</a> </td>
+                <td><a href="del?id=${girl.id}" onclick="javascript:return del();">Del</a></td>
 
             </tr>
         </c:forEach>
 
 
     </table>
+
+
     <br>
     <div>
         <a href="?start=1">首页</a>
@@ -46,6 +49,7 @@
         <a href="?start=${page.pages}">末页</a>
 
     </div>
+    <img src="imgs/a.jpg" width="800" height="450" onclick="makelove('徐睿')">
     <form action="add" method="post">
 
         name: <input name="name"> <br>
